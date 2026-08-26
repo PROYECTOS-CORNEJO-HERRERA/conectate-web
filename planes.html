@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planes · Conéctate por Fibra</title>
+<meta name="description" content="Planes de Internet fibra + TV Digital: Conéctate Sport y Conéctate Cine, desde $25.000/mes. WiFi 6, MAX Cine, TNT Sports y ESPN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<svg style="display:none">
+  <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a84ff"/><stop offset="1" stop-color="#00479f"/></linearGradient>
+  <symbol id="mark" viewBox="0 0 44 44">
+    <rect x="1.5" y="1.5" width="41" height="41" rx="12" fill="url(#lg)"/>
+    <path d="M12 25a13 13 0 0 1 20 0" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M16.5 29a7.5 7.5 0 0 1 11 0" stroke="#bfe0ff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <circle cx="22" cy="33" r="2.8" fill="#e11d2a"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><svg class="mark"><use href="#mark"/></svg><span>CONÉCT@TE<span class="sub">FIBRA ÓPTICA</span></span></a>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="planes.html" class="active">Planes</a>
+      <a href="index.html#cobertura">Cobertura</a>
+      <a href="cuenta.html">Mi cuenta</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-white" href="cuenta.html">Revisar cuenta</a>
+      <a class="btn btn-primary" href="cuenta.html#contratar">Contratar</a>
+      <button class="menu-btn" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero small">
+  <div class="wrap">
+    <span class="badge-loc">📺 Internet + TV Digital</span>
+    <h1>Nuestros <span>planes</span></h1>
+    <p class="lead">Elige entre <b>Conéctate Sport</b> y <b>Conéctate Cine</b>. Todos con megas simétricos, WiFi 6 y MAX Cine.</p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab on" data-t="sport" onclick="setTab('sport')">🏆 Conéctate Sport</button>
+      <button class="tab" data-t="cine" onclick="setTab('cine')">🎬 Conéctate Cine</button>
+    </div>
+
+    <div class="plans" id="p-sport">
+      <div class="plan"><div class="name">Plan Hogar</div>
+        <div class="megas"><b>600</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="now">$25.000<small>/mes</small></span></div>
+        <ul><li>35 canales de TV</li><li>3 apps Anmax TV</li><li>MAX Cine: +2.500 películas</li><li>TNT Sports y ESPN x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+      <div class="plan feat"><span class="tag">Más contratado</span><div class="name">Conéctate Sport</div>
+        <div class="megas"><b>750</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="old">$30.000</span><span class="now">$27.000<small>/mes</small></span></div><div class="price-note">Precio por 3 meses</div>
+        <ul><li>55 canales de TV</li><li>3 apps Anmax TV</li><li>MAX Cine: +2.500 películas</li><li>TNT Sports y ESPN x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+      <div class="plan"><span class="tag blue">Oportunidad</span><div class="name">Conéctate Sport</div>
+        <div class="megas"><b>900</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="old">$38.000</span><span class="now">$35.000<small>/mes</small></span></div><div class="price-note">Precio por 3 meses</div>
+        <ul><li>70 canales de TV</li><li>WiFi 6 de última generación</li><li>3 apps Anmax TV + MAX Cine</li><li>TNT Sports y ESPN x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+    </div>
+
+    <div class="plans" id="p-cine" style="display:none">
+      <div class="plan"><div class="name">Plan Hogar</div>
+        <div class="megas"><b>600</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="now">$39.000<small>/mes</small></span></div>
+        <ul><li>140 canales en FULL HD</li><li>Pack MAX Cine incluido</li><li>Canales premium (Venus y Playboy)</li><li>TNT Sports x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+      <div class="plan feat"><span class="tag">Más contratado</span><div class="name">Conéctate Cine</div>
+        <div class="megas"><b>750</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="old">$46.000</span><span class="now">$41.000<small>/mes</small></span></div><div class="price-note">Precio por 3 meses</div>
+        <ul><li>140 canales en FULL HD</li><li>Pack MAX Cine incluido</li><li>Canales premium (Venus y Playboy)</li><li>TNT Sports x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+      <div class="plan"><span class="tag blue">Oportunidad</span><div class="name">Conéctate Cine</div>
+        <div class="megas"><b>900</b><span>MB</span></div><div class="sim">Simétricos</div>
+        <div class="price"><span class="old">$50.000</span><span class="now">$45.000<small>/mes</small></span></div><div class="price-note">Precio por 3 meses</div>
+        <ul><li>140 canales en FULL HD</li><li>WiFi 6 + Pack MAX Cine</li><li>Canales premium (Venus y Playboy)</li><li>TNT Sports x 3 meses (luego $9.000)</li></ul>
+        <a class="btn btn-primary" href="cuenta.html#contratar">¡Contratar!</a></div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:28px">Valores referenciales. Los precios promocionales aplican por 3 meses. Cobertura sujeta a factibilidad técnica.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:12px"><svg class="mark"><use href="#mark"/></svg><span>CONÉCT@TE<span class="sub" style="color:#8fd0ff">FIBRA ÓPTICA</span></span></a>
+        <p style="max-width:34ch">Internet fibra óptica y TV Digital en Santa María y San Felipe.</p>
+      </div>
+      <div><h4>Servicio</h4><a href="planes.html">Planes Sport</a><a href="planes.html">Planes Cine</a><a href="index.html#cobertura">Cobertura</a><a href="cuenta.html">Revisar cuenta</a></div>
+      <div><h4>Contacto</h4><a href="cuenta.html#contratar">WhatsApp</a><a href="cuenta.html">Soporte técnico</a></div>
+    </div>
+    <div class="foot-bottom">© 2026 Conéctate por Fibra · Región de Valparaíso, Chile · Sitio por Panel360</div>
+  </div>
+</footer>
+
+<a class="chat-fab" href="cuenta.html#contratar" title="Asistente Web">💬 ¿Necesitas ayuda?</a>
+
+<script>
+function setTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+  document.getElementById('p-sport').style.display=t==='sport'?'grid':'none';
+  document.getElementById('p-cine').style.display=t==='cine'?'grid':'none';
+}
+</script>
+</body>
+</html>
