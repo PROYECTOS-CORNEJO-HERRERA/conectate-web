@@ -22,7 +22,7 @@
     bienvenida: '¡Hola! 👋 Soy el asistente de Conéctate por Fibra. ¿En qué te ayudo hoy?',
     color: '#0078d7',
     posicion: 'right',            // right | left
-    whatsapp: '56900000000',      // ← reemplazar por el WhatsApp real del ISP
+    whatsapp: '56949130098',      // WhatsApp oficial de Conéctate por Fibra
     // Departamentos (enrutamiento, igual que en el CRM)
     opciones: [
       { id: 'ventas',    label: '📶 Contratar internet', resp: '¡Genial! Tenemos planes de fibra desde <b>$25.000/mes</b> con WiFi 6, MAX Cine y deportes. ¿Me dices tu <b>comuna y dirección</b> para verificar factibilidad? Te dejo con un ejecutivo por WhatsApp para agendar la instalación.' },
