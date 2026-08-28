@@ -127,6 +127,45 @@ footer a:hover{color:#fff}
 
 .chat-fab{position:fixed;bottom:22px;right:22px;z-index:60;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;padding:13px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(10,132,255,.45);font-weight:700;cursor:pointer;animation:float 3s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.show{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.chat-fab{animation:none}}
+
+/* ============ Efectos premium ============ */
+/* Degradado del hero en movimiento suave */
+.hero{background-size:180% 180%;animation:heroShift 18s ease infinite}
+@keyframes heroShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+/* Texto destacado con brillo animado */
+.hero h1 span{background:linear-gradient(90deg,#8fd0ff 0%,#ffffff 50%,#8fd0ff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+/* Tarjeta del hero flotando */
+.hero-visual .hero-card{animation:floatCard 6s ease-in-out infinite}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+/* Puntito "en línea" que late en el badge */
+.badge-loc::before{content:"";width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+/* Hover con elevación en tarjetas de valor y de pago */
+.prop,.pay{transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s}
+.prop:hover,.pay:hover{transform:translateY(-7px);box-shadow:0 20px 46px rgba(6,42,82,.16)}
+.prop .ic{transition:transform .35s}
+.prop:hover .ic{transform:scale(1.1) rotate(-5deg)}
+/* Brillo que cruza los botones primarios */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn-primary:hover::after{animation:swipe .7s ease}
+@keyframes swipe{to{left:140%}}
+/* Plan destacado con halo que respira */
+.plan.feat{animation:halo 3.5s ease-in-out infinite}
+@keyframes halo{0%,100%{box-shadow:0 14px 44px rgba(10,132,255,.18)}50%{box-shadow:0 18px 54px rgba(10,132,255,.34)}}
+/* Logo con guiño al pasar el mouse */
+.logo .mark{transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.06)}
+/* Subrayado animado en el menú */
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--blue);transition:width .25s}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none}
+  .chat-fab,.hero,.hero h1 span,.hero-visual .hero-card,.badge-loc::before,.plan.feat{animation:none}
+  .hero h1 span{-webkit-text-fill-color:#8fd0ff;color:#8fd0ff}
+}
