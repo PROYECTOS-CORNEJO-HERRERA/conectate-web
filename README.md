@@ -24,3 +24,7 @@ Para verlo local: abrir `index.html` en el navegador, o servir la carpeta (`php 
 - Conectar "Revisar cuenta" y "Pagar" al sistema del ISP (ISP Cube / Webpay).
 - Enlazar los botones de WhatsApp al número real del cliente.
 - Fotos reales (van, ciudades) y logo definitivo aprobado por el cliente.
+
+## 🌐 En vivo
+https://proyectos-cornejo-herrera.github.io/conectate-web/ (GitHub Pages, rama main).
+Dominio futuro: conectateporfibra.cl
